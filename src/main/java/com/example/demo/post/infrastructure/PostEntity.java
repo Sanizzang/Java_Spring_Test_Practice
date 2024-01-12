@@ -13,8 +13,6 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.function.Function;
-
 @Getter
 @Setter
 @Entity
@@ -44,7 +42,7 @@ public class PostEntity {
         postEntity.content = post.getContent();
         postEntity.createdAt = post.getCreatedAt();
         postEntity.modifiedAt = post.getModifiedAt();
-        postEntity.writer = UserEntity.fromModel(post.getWriter());
+        postEntity.writer = UserEntity.from(post.getWriter());
         return postEntity;
     }
 

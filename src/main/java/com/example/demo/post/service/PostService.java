@@ -8,7 +8,7 @@ import com.example.demo.post.service.port.PostRepository;
 import com.example.user.infrastructure.UserEntity;
 import java.time.Clock;
 
-import com.example.user.service.UserService;
+import com.example.user.service.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class PostService {
 
     private final PostRepository postRepository;
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     public PostEntity getPostById(long id) {
         return postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Posts", id));

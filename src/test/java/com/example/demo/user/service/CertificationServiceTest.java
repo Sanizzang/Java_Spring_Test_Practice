@@ -2,12 +2,9 @@ package com.example.demo.user.service;
 
 import com.example.demo.mock.FakeMailSender;
 import com.example.user.service.CertificationService;
-import com.example.user.service.port.MailSender;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class CertificationServiceTest {
 

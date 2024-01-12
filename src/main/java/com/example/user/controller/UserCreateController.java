@@ -1,11 +1,11 @@
 package com.example.user.controller;
 
+import com.example.user.controller.port.UserService;
 import com.example.user.domain.User;
 import com.example.user.domain.UserCreate;
 import com.example.user.controller.response.UserResponse;
-import com.example.user.infrastructure.UserEntity;
-import com.example.user.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "유저(users)")
 @RestController
 @RequestMapping("/api/users")
+@Builder
 @RequiredArgsConstructor
 public class UserCreateController {
 
